@@ -11,6 +11,7 @@ document.getElementById('upload').addEventListener('submit',async function(event
         return hashParams.get('id_token');
     };
 
+
     const formData = {
         [imgID]: {
             title: title,
@@ -25,7 +26,7 @@ document.getElementById('upload').addEventListener('submit',async function(event
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': id_token
+                'Authorization': id_token()
             },
             body: JSON.stringify(formData)
         })
