@@ -21,7 +21,6 @@ document.getElementById('upload').addEventListener('submit',async function(event
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin':'*'
             },
             body: JSON.stringify(formData)
         })
