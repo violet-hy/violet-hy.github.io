@@ -14,7 +14,7 @@ document.getElementById('upload').addEventListener('submit',async function(event
         }
     };
 
-    const endpoint = 'https://h82pxx95va.execute-api.us-west-1.amazonaws.com/main';
+    const endpoint = 'https://h82pxx95va.execute-api.us-west-1.amazonaws.com/main/uploadresource';
 
     try{
         const response = await fetch(endpoint, {
