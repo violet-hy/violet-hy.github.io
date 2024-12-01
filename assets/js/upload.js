@@ -1,11 +1,15 @@
 document.getElementById('upload').addEventListener('submit',async function(event){
     event.preventDefault();
+
     const imgID = document.getElementById('imgID').value;
     const title = document.getElementById('title').value;
     const description = document.getElementById('description').value;
 
-    // const output = JSON.stringify({imgID, title, description})
-    // console.log(output)
+    const id_token = () => {
+        const hashParams = new URLSearchParams(window.location.hash.substring(1));
+        console.log(hashParams.get('id_token'));
+        return hashParams.get('id_token');
+    };
 
     const formData = {
         [imgID]: {
@@ -21,6 +25,7 @@ document.getElementById('upload').addEventListener('submit',async function(event
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': id_token
             },
             body: JSON.stringify(formData)
         })
