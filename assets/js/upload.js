@@ -29,9 +29,9 @@ document.getElementById('upload').addEventListener('submit',async function(event
                 'Authorization': id_token()
             },
             body: JSON.stringify(formData)
-        })
+        });
 
-        const result = await response.JSON();
+        const result = await response.json();
         alert(result.message);
     }
     catch(error) {
