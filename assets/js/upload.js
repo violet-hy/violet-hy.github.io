@@ -46,7 +46,6 @@ document.getElementById('upload').addEventListener('submit',async function(event
             const response = await fetch(endpoint, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'multipart/form-data',
                     'Authorization': id_token(),
                     'Access-Control-Allow-Origin': '*'
                 },
