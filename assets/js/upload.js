@@ -14,9 +14,17 @@ document.getElementById('upload').addEventListener('submit',async function(event
         }
     
     const imgData = document.getElementById('imgFile').files[0];
+    if (imgData) {
+        const reader = new FileReader();
+        reader.onloadend = () =>{
+            const imgDataB64 = reader.result.split(',')[1];
+            console.log(imgDataB64)
+        }
+        reader.readAsDataURL(imgData);
+    }
         
     formData.append('jsonData', JSON.stringify(jsonData));
-    formData.append('imgData', imgData);
+    formData.append('imgData', imgDataB64);
 
     //console.log(formData);
 
