@@ -47,7 +47,6 @@ document.getElementById('upload').addEventListener('submit',async function(event
                 method: 'POST',
                 headers: {
                     'Authorization': id_token(),
-                    'Access-Control-Allow-Origin': '*'
                 },
                 body: formData
             });
