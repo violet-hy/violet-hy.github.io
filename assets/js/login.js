@@ -1,5 +1,5 @@
 const clientId = '463rvuhbiefinjch1atqikd49c';
-const logoutRedirectUri = 'https://violet-hy.github.io';
+const logoutRedirectUri = encodeURIComponent('https://violet-hy.github.io');
 const cognitoDomain = 'https://us-west-1pu3kj4r7c.auth.us-west-1.amazoncognito.com';
 
 const logoutUrl = `${cognitoDomain}/logout?client_id=${clientId}&logout_uri=${logoutRedirectUri}`;
