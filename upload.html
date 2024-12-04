@@ -27,7 +27,7 @@
                 data-bs-toggle="popover"
                 data-bs-trigger="focus"
                 data-bs-placement="top"
-                data-bs-content="Select an image file to upload (must be .png). Then, give it a title and a short description."
+                data-bs-content="Select an image file to upload. Then, give it a title and a short description. Image must be .png. Image should be approx. 1:1 aspect ratio"
                 >
             </a>
 
@@ -45,11 +45,14 @@
 
                 <div class="mb-3">
                     <label for="description" class="form-label">Description:</label>
-                    <textarea id="description" name="description" class="form-control" required></textarea>
+                    <textarea id="description" name="description" class="form-control" maxlength="300"></textarea>
+                    <div id="charRemaining" class="form-text text-end">300</div>
                 </div>
 
                 <button type="submit" class="btn btn-light">Confirm</button>
+                <a href="index.html" class="btn btn-light position-absolute" style=" right: 30px;">Back</a>
             </form>
+            
         </div>
     </div>
 
@@ -58,6 +61,7 @@
 
     <script src="assets/js/upload.js"></script>
     <script src="assets/js/popover.js"></script>
+    <script src="assets/js/charRemainingCounter.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
