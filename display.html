@@ -36,7 +36,7 @@
                 </li>
               </ul>
       
-              <a id="login" class="btn" style="color:black; background-color: #acbbeb" href="https://us-west-1pu3kj4r7c.auth.us-west-1.amazoncognito.com/login?client_id=463rvuhbiefinjch1atqikd49c&response_type=token&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fviolet-hy.github.io%2Fupload.html">Log In</a>
+              <a id="login" class="btn" style="color:black; background-color: #acbbeb" onclick="toggleLoginLogout()">Log In</a>
       
               
             </div>
@@ -44,9 +44,10 @@
         </nav>
       </header>
 <main>
-    <div>
+    <div class="mb-4">
         <h1 class="text-center mb-4">User Gallery</h1>
         <p class="lead text-muted text-center">Browse a collection of pictures uploaded by our users. Explore the gallery for our true Piltover experience!</p>
+        <p class="lead text-muted text-center">Want to see your picture on this page? <a href=upload.html>Upload Here!</a></p>
     </div>
     <hr class="featurette-divider mx-auto" style="max-width:75%; align-self: center;">
 
@@ -77,6 +78,7 @@
       </div>
 
     <script src="assets/js/display.js"></script>
+    <script src="assets/js/login.js"></script>
     <!-- Load Bootstrap and Popper JS through CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
