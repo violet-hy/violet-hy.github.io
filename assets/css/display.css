@@ -1,0 +1,83 @@
+body {
+    background-color: #ACBBEB;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Center the loading spinner */
+#loadingSpinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card styling */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img{
+    height: 300px;
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    text-align: left;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #444;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Styling for the View button */
+.view-btn {
+    background-color: #5C6BC0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-btn:hover {
+    background-color: #3F51B5;
+}
+
+/* Make sure cards are properly aligned */
+.gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.col-md-4 {
+    flex: 1 1 30%;
+}
+
+.modal-body p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight:400;
+    color: #333;
+}
