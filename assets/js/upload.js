@@ -42,7 +42,7 @@ document.getElementById('upload').addEventListener('submit',async function(event
             const response = await fetch(endpoint, {
                 method: 'POST',
                 headers: {
-                    'Authorization': id_token(),
+                    'Authorization': id_token,
                 },
                 body: formData
             });

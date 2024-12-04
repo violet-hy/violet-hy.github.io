@@ -38,4 +38,4 @@ function logout() {
 }
 
 // Run on page load to update the login/logout button
-updateAuthButton();
+document.addEventListener('DOMContentLoaded', updateAuthButton());
