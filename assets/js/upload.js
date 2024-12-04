@@ -52,7 +52,12 @@ document.getElementById('upload').addEventListener('submit',async function(event
             });
     
             const result = await response.json();
+            if (result.message == "Unauthorized"){
+                alert('Only users are allowed to upload images. Please return to the previous page and sign in')
+            }
+            else{
             alert(result.message);
+            }
         }
         catch(error) {
             console.error('Upload Error',error)
