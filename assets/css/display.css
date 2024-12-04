@@ -1,7 +1,8 @@
 body {
-    background-color: #ACBBEB;
-    font-family: Arial, sans-serif;
-}
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: rgb(var(--bs-tertiary-color-rgb));
+  }
 
 h1 {
     text-align: center;
