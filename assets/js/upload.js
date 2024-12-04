@@ -4,11 +4,7 @@ document.getElementById('upload').addEventListener('submit',async function(event
     // API endpoint
     const endpoint = 'https://h82pxx95va.execute-api.us-west-1.amazonaws.com/main/uploadresource';
     //grab the auth token from url 
-    const id_token = () => {
-        const hashParams = new URLSearchParams(window.location.hash.substring(1));
-        console.log(hashParams.get('id_token'));
-        return hashParams.get('id_token');
-    };
+    const id_token = sessionStorage.getItem('id_token')
     
     const title = document.getElementById('title').value;
     const description = document.getElementById('description').value;
