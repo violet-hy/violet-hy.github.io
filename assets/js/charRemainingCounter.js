@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
       // Update the counter text
       charCount.textContent = `${remaining}`;
   
-      // Change color based on the remaining characters
+      // Change color
       if (remaining <= 20) {
-        charCount.style.color = 'red'; // Change color when less than or equal to 20 characters left
+        charCount.style.color = 'red'; 
       } else {
         charCount.style.color = ''; // Default color
       }

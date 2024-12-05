@@ -14,8 +14,6 @@ document.addEventListener('DOMContentLoaded', async function () {
         // Now parse the 'body' part of the response, which is a stringified JSON array
         const parsedData = JSON.parse(data.body);  // Convert the stringified array into an actual array
 
-        console.log(parsedData);  // Check the structure in the console
-
         const gallery = document.getElementById('gallery');
         gallery.innerHTML = ''; // Clear content before adding new items
 
@@ -23,12 +21,14 @@ document.addEventListener('DOMContentLoaded', async function () {
             const card = document.createElement('div');
             card.classList.add('col-md-4', 'mb-4');
 
+            // Construct an image card based on the data we receive
+            // Button contains data used in summoning modal
             card.innerHTML = `
             <div class="card">
                 <img src="${item.image}" class="card-img-top" alt="${item.title}">
                 <div class="card-body d-flex justify-content-between align-items-center">
                     <h5 class="card-title">${item.title}</h5>
-                    <div class="btn-group">
+                     <div class="btn-group"> 
                         <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#imgModal" data-img-id="${item.image}" data-description="${item.json.description}"}>View</button>
                     </div>
                 </div>
@@ -47,12 +47,11 @@ document.addEventListener('DOMContentLoaded', async function () {
         modal.addEventListener('show.bs.modal', function(event) {
             console.log('Modal Triggered');
             const button = event.relatedTarget; // Button that triggered the modal
-            const image = button.getAttribute('data-img-id'); // Get image URL
-            const description = button.getAttribute('data-description'); // Get description
+            const image = button.getAttribute('data-img-id'); 
+            const description = button.getAttribute('data-description'); 
 
             // Update modal content
             const modalImage = document.getElementById('modal-img');
-            console.log(modalImage);
             const modalDescription = document.getElementById('modal-desc');
 
             modalImage.src = image;
@@ -62,7 +61,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     } catch (error) {
         loadingSpinner.style.display = 'none';
-        gallery.innerHTML = '<p class="text-danger">Error loading gallery</p>'
+        gallery.innerHTML = '<h1 class="text-danger">Error loading gallery</h1>'
         console.error('Error fetching data:', error);
     }
 });
