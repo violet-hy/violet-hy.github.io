@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const apiUrl = 'https://h82pxx95va.execute-api.us-west-1.amazonaws.com/main/retrieveresource';
 
     const loadingSpinner = document.getElementById('loadingSpinner');
-    console.log(loadingSpinner);
+    
     const gallery = document.getElementById('gallery');
 
     // Function to fetch and display images + JSON pairs
