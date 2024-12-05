@@ -49,10 +49,12 @@ document.getElementById('upload').addEventListener('submit',async function(event
     
             const result = await response.json();
             if (result.message == "Unauthorized"){
-                alert('Only users are allowed to upload images. Please return to the previous page and sign in')
+                alert('Only users are allowed to upload images. Please sign in')
+                window.location.href = 'https://us-west-1pu3kj4r7c.auth.us-west-1.amazoncognito.com/login/continue?client_id=463rvuhbiefinjch1atqikd49c&redirect_uri=https%3A%2F%2Fviolet-hy.github.io%2Fupload.html&response_type=token&scope=email+openid+phone'
             }
             else{
             alert(result.message);
+            window.location.href= 'display.html'
             }
         }
         catch(error) {
