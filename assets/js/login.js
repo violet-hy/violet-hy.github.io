@@ -26,7 +26,7 @@ function updateAuthButton() {
 
 function login() {
 
-    const callbackUrl = window.location.href;
+    const callbackUrl = window.location.href.split('#')[0];
     // login URL dynamically sets callback URL based on what page you log in from
     const loginUrl = `https://us-west-1pu3kj4r7c.auth.us-west-1.amazoncognito.com/login/continue?client_id=463rvuhbiefinjch1atqikd49c&redirect_uri=${encodeURIComponent(callbackUrl)}&response_type=token&scope=email+openid+phone`;
     window.location.href = loginUrl;
