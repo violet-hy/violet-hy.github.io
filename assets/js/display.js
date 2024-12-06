@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 <div class="card-body d-flex justify-content-between align-items-center">
                     <h5 class="card-title">${item.title}</h5>
                      <div class="btn-group"> 
-                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#imgModal" data-img-id="${item.image}" data-description="${item.json.description}"}>View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#imgModal" data-img-id="https://dkyvyg78pccmz.cloudfront.net/${item.image}" data-description="${item.json.description}"}>View</button>
                     </div>
                 </div>
             </div>`;
