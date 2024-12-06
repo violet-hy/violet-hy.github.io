@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async function () {
     // URL of the API Gateway endpoint
-    const apiUrl = 'https://h82pxx95va.execute-api.us-west-1.amazonaws.com/main/retrieveresource';
+    const jsonURL = 'assets/json/combined_data.json';
 
     const loadingSpinner = document.getElementById('loadingSpinner');
     
@@ -8,7 +8,10 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     // Function to fetch and display images + JSON pairs
     try {
-        const response = await fetch(apiUrl);
+        const response = await fetch(jsonURL);
+        if (!response.ok) {
+            throw new Error('Failed to fetch json file');
+        }
         const data = await response.json();  // Parse the JSON from the response
 
         // Now parse the 'body' part of the response, which is a stringified JSON array
@@ -29,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 <div class="card-body d-flex justify-content-between align-items-center">
                     <h5 class="card-title">${item.title}</h5>
                      <div class="btn-group"> 
-                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#imgModal" data-img-id="https://dkyvyg78pccmz.cloudfront.net/${item.image}" data-description="${item.json.description}"}>View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#imgModal" data-img-id="https://dkyvyg78pccmz.cloudfront.net/${item.image}" data-description="${item.description}"}>View</button>
                     </div>
                 </div>
             </div>`;
