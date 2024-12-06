@@ -13,14 +13,11 @@ document.addEventListener('DOMContentLoaded', async function () {
             throw new Error('Failed to fetch json file');
         }
         const data = await response.json();  // Parse the JSON from the response
-
-        // Now parse the 'body' part of the response, which is a stringified JSON array
-        const parsedData = JSON.parse(data.body);  // Convert the stringified array into an actual array
-
+        console.log('data: ', data);
         const gallery = document.getElementById('gallery');
         gallery.innerHTML = ''; // Clear content before adding new items
 
-        parsedData.forEach(item => {
+        data.forEach(item => {
             const card = document.createElement('div');
             card.classList.add('col-md-4', 'mb-4');
 
