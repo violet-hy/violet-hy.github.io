@@ -1,0 +1,234 @@
+[
+  {
+    "image": "ANCS Club Logo1733462469499/image.png",
+    "title": "ANCS Club Logo",
+    "json": {
+      "title": "ANCS Club Logo",
+      "description": "Club logo"
+    }
+  },
+  {
+    "image": "Chickon1733462418580/image.png",
+    "title": "Chickon",
+    "json": {
+      "title": "Chickon",
+      "description": "Extremely detailed mesh of a chicken drumstick"
+    }
+  },
+  {
+    "image": "Data for Triangular Wier1733462112377/image.png",
+    "title": "Data for Triangular Wier",
+    "json": {
+      "title": "Data for Triangular Wier",
+      "description": ""
+    }
+  },
+  {
+    "image": "Flat Plate1733463119890/image.png",
+    "title": "Flat Plate",
+    "json": {
+      "title": "Flat Plate",
+      "description": "Flate plate4 for AE 341 Lab 3"
+    }
+  },
+  {
+    "image": "Head Loss for Enlargement1733462015093/image.png",
+    "title": "Head Loss for Enlargement",
+    "json": {
+      "title": "Head Loss for Enlargement",
+      "description": ""
+    }
+  },
+  {
+    "image": "Hemispherical Plate1733463088930/image.png",
+    "title": "Hemispherical Plate",
+    "json": {
+      "title": "Hemispherical Plate",
+      "description": "Hemispherical Plate"
+    }
+  },
+  {
+    "image": "Hexagon1733462035257/image.png",
+    "title": "Hexagon",
+    "json": {
+      "title": "Hexagon",
+      "description": "heaxgon"
+    }
+  },
+  {
+    "image": "Impact Energy for 1018 Steel1733462622728/image.png",
+    "title": "Impact Energy for 1018 Steel",
+    "json": {
+      "title": "Impact Energy for 1018 Steel",
+      "description": "Impact Energy for 1018 Steel"
+    }
+  },
+  {
+    "image": "Impact Energy for All Materials1733462658388/image.png",
+    "title": "Impact Energy for All Materials",
+    "json": {
+      "title": "Impact Energy for All Materials",
+      "description": "Impact Energy for All Materials lab "
+    }
+  },
+  {
+    "image": "Impact Energy vs. Temp for 304 Stainless Less1733462549689/image.png",
+    "title": "Impact Energy vs. Temp for 304 Stainless Less",
+    "json": {
+      "title": "Impact Energy vs. Temp for 304 Stainless Less",
+      "description": "Impact Energy vs. Temp for 304 Stainless Less"
+    }
+  },
+  {
+    "image": "Inventor Render of camera1733463008590/image.png",
+    "title": "Inventor Render of camera",
+    "json": {
+      "title": "Inventor Render of camera",
+      "description": "Inventor Render"
+    }
+  },
+  {
+    "image": "Jinx1733264946209/image.png",
+    "title": "Jinx",
+    "json": {
+      "title": "Jinx",
+      "description": "This is a picture of Jinx"
+    }
+  },
+  {
+    "image": "Loss Coefficient vs Reynolds Number1733461972598/image.png",
+    "title": "Loss Coefficient vs Reynolds Number",
+    "json": {
+      "title": "Loss Coefficient vs Reynolds Number",
+      "description": ""
+    }
+  },
+  {
+    "image": "Mel1733192654739/image.png",
+    "title": "Mel",
+    "json": {
+      "title": "Mel",
+      "description": "This is a picture of Mel"
+    }
+  },
+  {
+    "image": "Meow Meow Meow1733284067833/image.png",
+    "title": "Meow Meow Meow",
+    "json": {
+      "title": "Meow Meow Meow",
+      "description": "Bla blablbalblalaal blalbala"
+    }
+  },
+  {
+    "image": "Moment Diagram1733462223835/image.png",
+    "title": "Moment Diagram",
+    "json": {
+      "title": "Moment Diagram",
+      "description": "Moment Diagram for axle shaft"
+    }
+  },
+  {
+    "image": "Orifice Flow1733462330910/image.png",
+    "title": "Orifice Flow",
+    "json": {
+      "title": "Orifice Flow",
+      "description": "Orifice Flow for AE 341 fluids lab 4"
+    }
+  },
+  {
+    "image": "Rectangular Wier1733462163116/image.png",
+    "title": "Rectangular Wier",
+    "json": {
+      "title": "Rectangular Wier",
+      "description": "For AE 341 lab"
+    }
+  },
+  {
+    "image": "S-N Curve for Axle Shaft1733462297815/image.png",
+    "title": "S-N Curve for Axle Shaft",
+    "json": {
+      "title": "S-N Curve for Axle Shaft",
+      "description": "Note: did NOT meet required cycle life"
+    }
+  },
+  {
+    "image": "Salo1733189869518/image.png",
+    "title": "Salo",
+    "json": {
+      "title": "Salo",
+      "description": "This is a picture of Mr Salo "
+    }
+  },
+  {
+    "image": "Shear Diagram 1733462254274/image.png",
+    "title": "Shear Diagram ",
+    "json": {
+      "title": "Shear Diagram ",
+      "description": "Shear Diagram for axle shaft"
+    }
+  },
+  {
+    "image": "Sn Composition Diagram1733462949051/image.png",
+    "title": "Sn Composition Diagram",
+    "json": {
+      "title": "Sn Composition Diagram",
+      "description": "Sn Composition Diagram"
+    }
+  },
+  {
+    "image": "TRT1733462399274/image.png",
+    "title": "TRT",
+    "json": {
+      "title": "TRT",
+      "description": "turt"
+    }
+  },
+  {
+    "image": "Total Head Loss vs Vel. for Contraction1733461995021/image.png",
+    "title": "Total Head Loss vs Vel. for Contraction",
+    "json": {
+      "title": "Total Head Loss vs Vel. for Contraction",
+      "description": ""
+    }
+  },
+  {
+    "image": "Total Head Loss vs Velocity Head for Miter Elbow Bend1733462076697/image.png",
+    "title": "Total Head Loss vs Velocity Head for Miter Elbow Bend",
+    "json": {
+      "title": "Total Head Loss vs Velocity Head for Miter Elbow Bend",
+      "description": ""
+    }
+  },
+  {
+    "image": "Viktor1733442628452/image.png",
+    "title": "Viktor",
+    "json": {
+      "title": "Viktor",
+      "description": "hfdafdsafsda"
+    }
+  },
+  {
+    "image": "lead tin phase AGAIN1733462917571/image.png",
+    "title": "lead tin phase AGAIN",
+    "json": {
+      "title": "lead tin phase AGAIN",
+      "description": "lead tin phase AGAIN"
+    }
+  },
+  {
+    "image": "lead tin phase diagram1733462870889/image.png",
+    "title": "lead tin phase diagram",
+    "json": {
+      "title": "lead tin phase diagram",
+      "description": "lead tin phase diagram"
+    }
+  },
+  {
+    "image": "test1733435991048/image.png",
+    "title": "test",
+    "json": {
+      "title": "test",
+      "description": "test"
+    }
+  }
+]
