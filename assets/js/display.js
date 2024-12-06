@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             // Button contains data used in summoning modal
             card.innerHTML = `
             <div class="card">
-                <img src="${item.image}" class="card-img-top" alt="${item.title}">
+                <img src="https://dkyvyg78pccmz.cloudfront.net/${item.image}" class="card-img-top" alt="${item.title}">
                 <div class="card-body d-flex justify-content-between align-items-center">
                     <h5 class="card-title">${item.title}</h5>
                      <div class="btn-group"> 
