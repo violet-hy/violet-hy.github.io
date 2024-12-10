@@ -1,47 +1,77 @@
-document.addEventListener('DOMContentLoaded', async function () {
-    // URL of the API Gateway endpoint
-    const jsonURL = 'assets/json/combined_data.json';
+let lastEvaluatedKey = null;
+let loading = false;
+const API_URL = 'https://h82pxx95va.execute-api.us-west-1.amazonaws.com/main/retrieveresource';
 
-    const loadingSpinner = document.getElementById('loadingSpinner');
+const loadingSpinner = document.getElementById('loadingSpinner');
     
-    const gallery = document.getElementById('gallery');
+const gallery = document.getElementById('gallery');
 
-    // Function to fetch and display images + JSON pairs
+async function fetchImages() {
+    if (loading) return;
+    loading = true;
+    
     try {
-        const response = await fetch(jsonURL);
-        if (!response.ok) {
-            throw new Error('Failed to fetch json file');
+        const params = new URLSearchParams(); //If we have a last Key value, we encode it into our API request
+        if (lastEvaluatedKey) { //Then, lambda can parse that and give us new pictures that we havent seen
+            encodedKey = encodeURIComponent(JSON.stringify(lastEvaluatedKey))
+            params.append('lastEvaluatedKey', encodedKey );
         }
-        const data = await response.json();  // Parse the JSON from the response
+        
+        console.log('Calling Url..: ', `${API_URL}?${params.toString()}`);
+        const response = await fetch(`${API_URL}?${params.toString()}`);
+        const data = await response.json();
         console.log('data: ', data);
-        const gallery = document.getElementById('gallery');
-        gallery.innerHTML = ''; // Clear content before adding new items
+        const responseBody = JSON.parse(data.body);
+        console.log('data body: ', responseBody);
+        if (response.ok) {
+            const files = responseBody.files;
+            if (Array.isArray(files) && files.length > 0) {
+                console.log('Files: ', files);
+            }
+            else {
+                throw new Error('Files is not an Array');
+            }
+            
+            lastEvaluatedKey = responseBody.lastEvaluatedKey ? JSON.parse(responseBody.lastEvaluatedKey) : null;
+            console.log('Last Key: ', lastEvaluatedKey);
 
-        data.forEach(item => {
-            const card = document.createElement('div');
-            card.classList.add('col-md-4', 'mb-4');
-
-            // Construct an image card based on the data we receive
-            // Button contains data used in summoning modal
-            card.innerHTML = `
-            <div class="card">
-                <img src="https://dkyvyg78pccmz.cloudfront.net/${item.image}" class="card-img-top" alt="${item.title}">
-                <div class="card-body d-flex justify-content-between align-items-center">
-                    <h5 class="card-title">${item.title}</h5>
-                     <div class="btn-group"> 
-                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#imgModal" data-img-id="https://dkyvyg78pccmz.cloudfront.net/${item.image}" data-description="${item.description}"}>View</button>
+            const gallery = document.getElementById('gallery');
+            files.forEach(file => {
+                const card = document.createElement('div');
+                card.classList.add('col-md-4', 'mb-4');
+    
+                // Construct an image card based on the data we receive
+                // Button contains data used in summoning modal
+                card.innerHTML = `
+                <div class="card">
+                    <img src="${file.cdn_url}" class="card-img-top" alt="${file.title}">
+                    <div class="card-body d-flex justify-content-between align-items-center">
+                        <h5 class="card-title">${file.title}</h5>
+                         <div class="btn-group"> 
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#imgModal" data-img-id="${file.cdn_url}" data-description="${file.description}"}>View</button>
+                        </div>
                     </div>
-                </div>
-            </div>`;
+                </div>`;
+                gallery.appendChild(card);
+            });
 
+            
 
-            gallery.appendChild(card);
+            if (!lastEvaluatedKey) {
+                loadMoreButton.style.display = 'none';
+            }
+            else {
+                loadMoreButton.style.display = 'block';
+            }
 
-        });
-
+        }  
+        else {
+            console.error('Error loading images: ', data.error);
+        }      
 
         loadingSpinner.style.display = 'none';
         console.log('Finished Loading');
+        loading = false;
 
         const modal = document.getElementById('imgModal');
         modal.addEventListener('show.bs.modal', function(event) {
@@ -64,4 +94,10 @@ document.addEventListener('DOMContentLoaded', async function () {
         gallery.innerHTML = '<h1 class="text-danger">Error loading gallery</h1>'
         console.error('Error fetching data:', error);
     }
-});
+}
+
+const loadMoreButton = document.getElementById('loadMoreButton');
+loadMoreButton.addEventListener('click', () => {fetchImages()});
+
+
+
