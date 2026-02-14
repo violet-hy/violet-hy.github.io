@@ -15,9 +15,10 @@
 </head>
 
 <body>
-  <h1>Wordle Game</h1>
-  <div id="game-board"></div>
+  <h1 id="title">AVADLE</h1>
 
+  <div id="game-board"></div>
+  <h1 id="game-counter">Wordle Game</h1>
 
 
   <div id="keyboard-cont">
@@ -57,12 +58,22 @@
     </div>
   </div>
 
+  <div id="solved-words"></div>
+  <div id="ask-question"></div>
+  <div id="answer-buttons"></div>
+
+  <div id="fireworks-container"></div>
+  <img id="sendai" src="/assets/img/cafesendaiyes.png"/>
+  <img id="columbina" src="/assets/img/columbinasayyes.png"/>
+
   <!-- Custom JS -->
   <script src="assets/js/game.js" type="module"></script>
   <script src="assets/js/words.js" type="module"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <!-- jsDelivr  -->
+  <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
 
 
 </body>

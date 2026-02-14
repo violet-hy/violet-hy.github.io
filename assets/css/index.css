@@ -1,8 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #121213;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #121213;
+
+  transition: background-color 1s linear;
 }
+
 
 #game-board {
   display: flex;
@@ -10,10 +13,52 @@ body {
   flex-direction: column;
 }
 
+#game-counter {
+  color: #808080;
+  font-size: 1rem;
+  letter-spacing: .2rem;
+  /* align-items: center;
+  text-align: center; */
+}
+
+#title {
+  color: #888888;
+  font-size: 3rem;
+}
+
+#solved-words {
+  display: flex;
+  margin-top: 3rem;
+}
+
+#ask-question {
+  opacity: 0;
+  display: flex;
+  margin-top: 3rem;
+  justify-content: center;
+  transition: transform 2.5s linear, opacity 2s linear;
+}
+
+.solved-letter-row {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.final-answer-row {
+  display: flex;
+  margin-right: 24px;
+}
+
+.final-answer-row .letter-box {
+  background-color: #121213c9
+}
+
 .letter-box {
   color: #f8f8f8;
   border: 2px solid #3a3a3c;
   border-radius: 3px;
+  border-style: solid;
   margin: 2px;
   font-size: 2.5rem;
   font-weight: 700;
@@ -27,6 +72,7 @@ body {
 
 .filled-box {
   border: 2px solid #565758;
+  /* */
 }
 
 .letter-row {
@@ -51,16 +97,78 @@ body {
 .keyboard-button {
   font-size: 1.25rem;
   font-weight: bold;
-  padding: 0.6rem;
-  margin: 0 4px;
-  height: 58px;;
+  /* font-family: "nyt-franklin"; */
+  /* padding: 0.8rem; */
+  margin: 0 4px 0 0;
+  height: 58px;
+  ;
   background-color: #818384;
-  color:#f8f8f8;
+  color: #f8f8f8;
   cursor: pointer;
   text-transform: uppercase;
-  flex:1;
+  /* flex:1.5; */
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 4px;;
+  border-radius: 4px;
+  border-style: solid;
+  min-width: 43px;
+  overflow: visible;
+}
+
+#fireworks-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -999;
+}
+
+#sendai {
+  position: fixed;
+  left: 80px;
+  top: 200px;
+  height: 50%;
+  z-index: -998;
+  opacity: 0;
+  transition: opacity 1s linear;
+}
+
+#columbina {
+  position: fixed;
+  right: 60px;
+  top: 185px;
+  height: 50%;
+  z-index: -998;
+  opacity: 0;
+  transition: opacity 1s linear;
+}
+
+#answer-buttons {
+  opacity: 0;
+  transition: opacity .75s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:fixed;
+  width: 100%;
+  bottom: 40px;
+}
+
+#answer-buttons .yesButton {
+  font-size: 2rem;
+  background-color: #51a351;
+  color: #160202;
+  border-radius: 8px;
+  margin-right: 16px;
+  padding: 4;
+}
+
+#answer-buttons .noButton {
+  font-size: .5rem;
+  background-color: #f3695771;
+  color: #160202;
+  border-radius: 8px;
+  height: 1rem;
 }
