@@ -220,7 +220,6 @@ document.getElementById("keyboard-cont").addEventListener("click", (e) => {
 
     if (key === "Del") {
         key = "Backspace"
-        promptFinal();
     }
 
     document.dispatchEvent(new KeyboardEvent("keyup", { 'key': key }))
@@ -524,6 +523,7 @@ function initAnswerButtons() {
 }
 
 function yayifyEverything() {
+    document.title = "YAAAAAAAAY"
     document.getElementById('title').textContent = "YAAAAAAAAAAAAAAAYYYYY";
     document.getElementById('title').style.opacity = 1;
 
