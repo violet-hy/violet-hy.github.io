@@ -172,3 +172,16 @@ body {
   border-radius: 8px;
   height: 1rem;
 }
+
+
+
+
+
+/* PASSWORD PAGE */
+
+#password-box {
+  color: #f8f8f8;
+  position: relative;
+  margin-top: 30%;
+  /* left: 50%; */
+}

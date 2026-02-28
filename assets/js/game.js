@@ -574,8 +574,18 @@ function noButtonClick() {
     noCounter++;
 }
 
+window.addEventListener("load", (e) => {
+    e.preventDefault();
+    // console.log('loading');
+    if (localStorage.getItem('violethy-pwd-check') != 'c521b9c32ee2ae1bebf044f4a84933d3') {
+        console.log("no pwd");
+        window.location.assign('/index');
+    }
+})
+
 initBoard()
 initSolvedWords()
 initQuestionBoxes()
 updateGameCounter();
+
 
